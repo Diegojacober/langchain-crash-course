@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "langchain-crash-course"
+version = "0.1.0"
+description = ""
+authors = ["Diego <diegoalencar.jacober@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.2.14"
+python-dotenv = "^1.0.1"
+langchain-community = "^0.2.12"
+langchain-openai = "^0.1.22"
+langchain-anthropic = "^0.1.23"
+langchain-google-genai = "^1.0.10"
+langchain-google-firestore = "^0.3.0"
+firestore = "^0.0.8"
+chromadb = "^0.5.5"
+tiktoken = "^0.7.0"
+sentence-transformers = "^3.0.1"
+bs4 = "^0.0.2"
+firecrawl-py = "^0.0.20"
+langchainhub = "^0.1.21"
+wikipedia = "^1.4.0"
+tavily-python = "^0.4.0"
+
+[tool.pyright]
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+# https://beta.ruff.rs/docs/configuration/
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

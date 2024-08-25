@@ -1,0 +1,11 @@
+{
+  "ruff.configPath": "${workspaceFolder}/pyproject.toml",
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.formatting.provider": "none",
+  "editor.defaultFormatter": "charliermarsh.ruff",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.exclude": ["${workspaceFolder}/.cache"]
+}
