@@ -39,7 +39,7 @@ if not os.path.exists(persistent_directory):
             documents.append(doc)
 
     # Split the documents into chunks
-    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+    text_splitter = CharacterTextSplitter(chunk_size=2000, chunk_overlap=300)
     docs = text_splitter.split_documents(documents)
 
     # Display information about the split documents
@@ -49,7 +49,9 @@ if not os.path.exists(persistent_directory):
     # Create embeddings
     print("\n--- Creating embeddings ---")
     embeddings = OpenAIEmbeddings(
-        model="text-embedding-3-small"
+        model="text-embedding-3-small",
+        show_progress_bar=True,
+        
     )  # Update to a valid embedding model if needed
     print("\n--- Finished creating embeddings ---")
 
